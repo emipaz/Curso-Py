@@ -37,12 +37,13 @@ df = pd.DataFrame({
     "nombre":["juan","mateo","maria"],
     "sexo":["Masculino","Masculino","Femenino"]
 })
-
+display(df)
 print(df["edad"].dtype)
 ```
 
-Salida:
-
+```python
+df.info()
+```
 
 ---
 
@@ -345,7 +346,7 @@ df.info()
 ## Verificar
 
 ```python
-df["sexo"].dtype
+df["sexo_categoria"].dtype
 ```
 
 Resultado:
@@ -404,6 +405,10 @@ print(df_categoria['Tamaño'].dtype)
 ```
 
 ```python
+df_categoria['Tamaño'].dtype
+```
+
+```python
 # Ejemplo de comparación entre categorías ordenadas
 print('\nComparación entre categorías ordenadas:')
 print(df_categoria['Tamaño'][0] < df_categoria['Tamaño'][2])  # Pequeño < Grande → True
@@ -431,8 +436,8 @@ Representa fecha y hora.
 
 ```python
 data = {
-    'id': [1,2,3,4],
-    'fecha_str': ['2023-01-05', '05/02/2023', '2023-03-10 14:30', '2023-04-01T09:15:00']
+    'id': [1,2,3,4,5],
+    'fecha_str': ['2023-01-05', '05/02/2023', '2023-03-10 14:30', '2023-04-01T09:15:00', "2025-12-31"]
 }
 df_fechas = pd.DataFrame(data)
 
