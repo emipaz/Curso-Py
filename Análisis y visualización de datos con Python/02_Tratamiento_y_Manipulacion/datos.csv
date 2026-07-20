@@ -1,0 +1,11 @@
+id,nombre,edad,salario,ciudad
+1,Juan,25.0,50000.0,Buenos Aires
+2,Ana,30.0,60000.0,Córdoba
+3,Pedro,,55000.0,Rosario
+4,María,28.0,,Cordoba
+5,Luis,35.0,70000.0,
+5,Luis,35.0,70000.0,
+7,Carlos,45.0,80000.0,Mendoza
+8,Sofía,29.0,62000.0,Rosario
+9,,999.0,5000000.0,Buenos Aires
+10,Laura,31.0,65000.0,Cordoba
