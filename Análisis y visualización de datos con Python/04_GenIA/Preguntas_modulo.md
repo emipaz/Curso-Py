@@ -53,12 +53,19 @@
 
 ## Un científico de datos debe desarrollar un modelo para predecir la pérdida de clientes en una empresa de telecomunicaciones. Sin embargo, el conjunto de datos disponible contiene información sensible sobre los clientes, lo que plantea problemas de privacidad. ¿Qué técnica de generación de datos sintéticos sería la más adecuada para crear un conjunto de datos que preserve la privacidad y que capture con precisión los patrones y las relaciones subyacentes en los datos originales, a la vez que mitigue el riesgo de exponer información sensible? Seleccione la mejor respuesta.
 
-
 - Redes generativas adversarias (GAN)
 - **Autocodificadores variacionales (VAE)**
 - Modelos autorregresivos
 - Modelos basados en el flujo
 
+## Una entidad financiera está desarrollando un sistema de detección de fraudes para identificar transacciones sospechosas. Quieren generar datos sintéticos que simulen diversas actividades fraudulentas para entrenar y evaluar sus modelos. ¿Qué técnica de generación de datos sintéticos sería más eficaz para crear datos sintéticos diversos y realistas que capturen los patrones sutiles y las anomalías indicativas de un comportamiento fraudulento? Seleccione la mejor respuesta.
+
+- Autocodificadores variacionales (VAE)
+- Modelos basados en el flujo
+- **Redes generativas adversarias (GAN)**
+- Modelos autorregresivos
+
+> Correcto Los GAN son especialmente eficaces a la hora de generar datos sintéticos muy realistas que pueden captar los sutiles patrones y anomalías indicativos de un comportamiento fraudulento.
 
 ## Un equipo de investigación está desarrollando un modelo de aprendizaje automático para identificar distintos tipos de células en imágenes microscópicas. El conjunto de datos contiene un número limitado de imágenes de ciertos tipos de células poco comunes. ¿Qué estrategia se puede utilizar para hacer frente a la escasez de datos de estos tipos de células poco comunes y mejorar la capacidad del modelo para identificarlos con precisión? Seleccione la mejor respuesta.
 
@@ -117,3 +124,120 @@ Modelos autorregresivos → generación secuencial.
 Flow-Based Models → probabilidades exactas y transformaciones invertibles.
 
 Ese patrón te va a ayudar a responder varias preguntas similares del examen.
+
+
+# Preguntas explicadas
+
+## Un equipo de investigadores trabaja en un proyecto para mejorar la precisión del análisis de imágenes médicas. Su objetivo es generar imágenes médicas sintéticas que aumenten el limitado conjunto de datos existente y mejoren el entrenamiento de sus modelos de aprendizaje automático. ¿Qué Modelos generativos serían especialmente adecuados para crear imágenes médicas sintéticas que capturen los detalles intrincados y las estructuras complejas que se encuentran en las exploraciones médicas reales? Seleccione todos los que corresponda.
+
+
+- Modelos basados en transformadores
+
+Esto no debería estar seleccionado
+No del todo. Para más información, consulte las técnicas de generación de datos sintéticos.
+
+- **Modelos autorregresivos**
+
+> Correcto Los modelos autorregresivos destacan en la captura de dependencias secuenciales, lo que los hace adecuados para generar imágenes con detalles intrincados y estructuras complejas, como las exploraciones médicas.
+
+- Modelos basados en el flujo
+
+Esto no debería estar seleccionado
+No del todo. Para más información, consulte las técnicas de generación de datos sintéticos.
+
+- **Autocodificadores variacionales (VAE)**
+
+> Correcto Las VAE pueden captar las complejas distribuciones y variaciones presentes en las imágenes médicas, lo que les permite generar imágenes sintéticas que se asemejan mucho a las exploraciones reales al tiempo que introducen variaciones.
+
+Explicacion pregunta:
+
+Coincido con tu impresión. Esta pregunta también está redactada de una forma que puede confundir, sobre todo porque mezcla modelos generativos de distintas familias.
+
+La pregunta dice:
+
+"Seleccione todos los que correspondan" para generar imágenes médicas sintéticas.
+
+Las opciones son:
+
+✅ Modelos basados en transformadores
+✅ Modelos autorregresivos
+✅ Modelos basados en el flujo (Flow-based Models)
+✅ Autocodificadores variacionales (VAE)
+Desde el punto de vista actual de IA (2025-2026)
+
+Todos esos modelos pueden ser generativos, aunque no todos son igual de utilizados para imágenes médicas.
+
+Modelo	¿Genera imágenes?	¿Lo marcaría?
+Transformadores	✅ Sí (DiT, ImageGPT, MaskGIT, etc.)	✅ Sí
+Autorregresivos	✅ Sí (PixelCNN, PixelRNN, ImageGPT)	✅ Sí
+Flow-based	✅ Sí (RealNVP, Glow)	✅ Sí
+VAE	✅ Sí	✅ Sí
+
+Así que, si la pregunta es literalmente "¿qué modelos generativos son adecuados?", yo marcaría las cuatro.
+
+¿Qué me hace ruido?
+
+La frase:
+
+"...capturen los detalles intrincados y las estructuras complejas..."
+
+Esa descripción históricamente se utilizaba muchísimo para hablar de:
+
+GANs
+Diffusion Models
+
+Y justamente no aparecen.
+
+Si esta pregunta fuera de hace unos años, esperaría encontrar:
+
+✅ GAN
+✅ VAE
+
+Si fuera un curso moderno:
+
+✅ Diffusion Models
+✅ Transformers
+
+Pero aquí reemplazaron GAN por Flow y Autorregresivos.
+
+Si esto pertenece al mismo curso que la pregunta anterior
+
+Empiezo a sospechar que el curso está intentando enseñar:
+
+"Existen cuatro grandes familias de modelos generativos"
+
+Transformers
+Autorregresivos
+Flow
+VAE
+
+y por eso la respuesta correcta probablemente sea:
+
+✔ Transformadores
+
+✔ Autorregresivos
+
+✔ Flow-based
+
+✔ VAE
+
+Mi crítica a la pregunta
+
+La redacción no es buena porque dice:
+
+"serían especialmente adecuados"
+
+Eso implica comparar rendimiento.
+
+En la práctica, para generar imágenes médicas hoy uno pensaría antes en:
+
+Diffusion Models ⭐⭐⭐⭐⭐
+GANs ⭐⭐⭐⭐
+Transformers (DiT) ⭐⭐⭐⭐
+VAE ⭐⭐⭐
+Flow ⭐⭐
+Autorregresivos ⭐⭐
+
+Es decir, "especialmente adecuados" no describe por igual a las cuatro familias. Sin embargo, como todas son modelos generativos capaces de producir imágenes, la interpretación más segura para un examen introductorio es marcar las cuatro.
+
+Mi respuesta al examen sería: ✅ las cuatro opciones.
