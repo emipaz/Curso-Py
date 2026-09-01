@@ -1,0 +1,107 @@
+{
+  "q1": {
+    "tipo": "unica",
+    "opciones": [
+      "Permite usar diferentes versiones de pandas sin conflictos",
+      "Instala automáticamente la última versión de pandas",
+      "Evita que se produzcan errores en tu código",
+      "Mejora el rendimiento de tu aplicación"
+    ],
+    "correcta": "A",
+    "explicacion": "Los entornos virtuales crean espacios aislados, por lo que cada proyecto puede tener su propio set de bibliotecas y versiones del intérprete sin interferir entre sí."
+  },
+  "q2": {
+    "tipo": "unica",
+    "opciones": [
+      "Almacenamiento en la nube",
+      "Navegador web",
+      "Entorno virtual (venv / uv venv)",
+      "Editor de texto"
+    ],
+    "correcta": "C",
+    "explicacion": "Un entorno virtual (creado con venv o uv) es la herramienta para aislar las dependencias de un proyecto Python."
+  },
+  "q3": {
+    "tipo": "unica",
+    "opciones": [
+      "Actualizan automáticamente todas las librerías",
+      "Crean espacios aislados con su propio set de librerías y versión de Python",
+      "Solo permiten instalar las últimas versiones",
+      "Mejoran el rendimiento optimizando el uso de librerías"
+    ],
+    "correcta": "B",
+    "explicacion": "Cada entorno virtual es una burbuja aislada: su propia versión de Python y sus propias versiones de librerías, sin conflictos entre proyectos."
+  },
+  "q4": {
+    "tipo": "unica",
+    "opciones": [
+      "Ofrece un entorno fácil de usar con botones",
+      "Proporciona una interfaz visual para arrastrar y soltar",
+      "Organiza automáticamente los archivos sin entrada del usuario",
+      "Permite interactuar directamente con el sistema operativo"
+    ],
+    "correcta": "D",
+    "explicacion": "Escribiendo comandos de texto, la línea de comandos te da acceso y control directo sobre el sistema operativo."
+  },
+  "q5": {
+    "tipo": "unica",
+    "opciones": [
+      "La CLI no está disponible en el SO",
+      "La variable PATH no está configurada correctamente",
+      "El script de instalación está dañado",
+      "El paquete no es compatible con el SO"
+    ],
+    "correcta": "B",
+    "explicacion": "El sistema busca los ejecutables en las carpetas del PATH; si no encuentra el script, muestra 'comando no encontrado'."
+  },
+  "q6": {
+    "tipo": "unica",
+    "opciones": ["subprocess", "os", "sys", "argparse"],
+    "correcta": "D",
+    "explicacion": "argparse es la librería estándar para definir, validar y manejar argumentos de línea de comandos con ayuda y valores por defecto."
+  },
+  "q7": {
+    "tipo": "multiple",
+    "opciones": [
+      "Crear un wrapper .bat que active el entorno virtual y ejecute el script con el intérprete de ese entorno, guardándolo en una carpeta del PATH",
+      "Crear un wrapper .ps1 equivalente (PowerShell) que active el entorno virtual e invoque el script con el intérprete de ese entorno, en el PATH",
+      "Dar permisos con chmod +x process_data.py y ejecutarlo directamente",
+      "Asociar la extensión .py a Python y escribir process_data.py directamente, sin entorno activado"
+    ],
+    "correctas": ["A", "B"],
+    "explicacion": "En Windows no se crea un 'ejecutable' como en Linux. Para poder lanzar el script con un simple nombre, se hace un wrapper (.bat o .ps1) que activa el entorno virtual (p. ej. .\\env\\Scripts\\activate) y después invoca el script con el intérprete de ese entorno (python process_data.py). Ese wrapper debe estar en una carpeta del PATH (o en la carpeta actual). chmod +x y el shebang son propios de Linux/macOS; asociar la extensión .py ejecuta el script, pero no asegura que use el intérprete del entorno."
+  },
+  "q8": {
+    "tipo": "unica",
+    "opciones": [
+      "Aumentar la complejidad de las operaciones",
+      "Garantizar resultados coherentes y precisos",
+      "Priorizar la introducción manual de datos",
+      "Fomentar la creatividad individual en cada tarea"
+    ],
+    "correcta": "B",
+    "explicacion": "La automatización ayuda a obtener resultados coherentes y precisos, minimizando los errores manuales."
+  },
+  "q9": {
+    "tipo": "unica",
+    "opciones": [
+      "Enviar correos recordatorios sobre citas",
+      "Generar informes de ventas semanales",
+      "Responder consultas con respuestas personalizadas y empáticas",
+      "Organizar archivos en una unidad de red compartida"
+    ],
+    "correcta": "C",
+    "explicacion": "Requiere juicio humano, empatía y adaptarse a cada cliente; aunque la IA ayuda, automatizar por completo es difícil."
+  },
+  "q10": {
+    "tipo": "unica",
+    "opciones": [
+      "Precisión: cálculos exactos en el gran conjunto de datos",
+      "Eficacia: ahorrar tiempo en tareas repetitivas",
+      "Escalabilidad: manejar el gran volumen y su crecimiento futuro",
+      "Reducción de errores: minimizar errores manuales"
+    ],
+    "correcta": "C",
+    "explicacion": "Cuando hay grandes volúmenes de datos y crecimiento futuro, la escalabilidad es la ventaja clave."
+  }
+}
