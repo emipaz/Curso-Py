@@ -1,0 +1,2 @@
+Hola, esta es la primera nota.
+Segunda linea del archivo.
