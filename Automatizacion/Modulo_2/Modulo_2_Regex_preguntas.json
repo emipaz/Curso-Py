@@ -1,0 +1,112 @@
+{
+  "q1": {
+    "tipo": "unica",
+    "opciones": [
+      "\\d+",
+      "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+      "\\d{3}-\\d{3}-\\d{4}",
+      "\\b\\w+\\b"
+    ],
+    "correcta": "B",
+    "explicacion": "El patrón B captura una dirección de correo: parte local, el '@', el dominio y un TLD de al menos dos letras. Los demás coinciden con números, teléfonos o palabras."
+  },
+  "q2": {
+    "tipo": "unica",
+    "opciones": [
+      "Cualquier dígito",
+      "Uno o más dígitos",
+      "Exactamente 3 dígitos",
+      "Un dígito opcional"
+    ],
+    "correcta": "B",
+    "explicacion": "El cuantificador '+' indica que el carácter/grupo anterior debe aparecer una o más veces. Así, \\d+ coincide con una o más cifras seguidas."
+  },
+  "q3": {
+    "tipo": "unica",
+    "opciones": [
+      "Números de teléfono con formato XXX-XXX-XXXX",
+      "Direcciones de correo",
+      "Cualquier URL",
+      "Palabras sueltas"
+    ],
+    "correcta": "A",
+    "explicacion": "\\d{3}-\\d{3}-\\d{4} coincide exactamente con tres dígitos, guion, tres dígitos, guion y cuatro dígitos, es decir teléfonos tipo 555-123-4567."
+  },
+  "q4": {
+    "tipo": "multiple",
+    "opciones": [
+      "re.search() para encontrar el primer patrón",
+      "re.match() para anclar el patrón al inicio",
+      "re.findall() para devolver todas las coincidencias",
+      "re.sub() para reemplazar coincidencias"
+    ],
+    "correctas": ["A", "B", "C", "D"],
+    "explicacion": "El módulo re ofrece estas cuatro: search (primera coincidencia en cualquier punto), match (desde el inicio), findall (todas) y sub (sustitución). Todas son válidas."
+  },
+  "q5": {
+    "tipo": "unica",
+    "opciones": [
+      "re.search()",
+      "re.match()",
+      "re.findall()",
+      "re.fullmatch()"
+    ],
+    "correcta": "C",
+    "explicacion": "re.findall() devuelve una lista con todas las coincidencias del patrón en el texto, ideal para extraer varias apariciones (emails, fechas, etc.)."
+  },
+  "q6": {
+    "tipo": "unica",
+    "opciones": [
+      "^",
+      "$",
+      "\\b",
+      "."
+    ],
+    "correcta": "A",
+    "explicacion": "El ancla '^' exige que la coincidencia comience al inicio de la línea. '$' marca el final, '\\b' son límites de palabra y '.' coincide con cualquier carácter."
+  },
+  "q7": {
+    "tipo": "unica",
+    "opciones": [
+      "r\"\\d+-\\d+-\\d+\"",
+      "r\"\\w{3}-\\w{3}-\\w{4}\"",
+      "r\"\\d{3}-\\d{3}-\\d{4}\"",
+      "r\"[\\d-]+\""
+    ],
+    "correcta": "C",
+    "explicacion": "\\d{3}-\\d{3}-\\d{4} valida estrictamente el formato XXX-XXX-XXXX con tres grupos de dígitos separados por guiones."
+  },
+  "q8": {
+    "tipo": "unica",
+    "opciones": [
+      "\\w",
+      "\\d",
+      "\\s",
+      "\\b"
+    ],
+    "correcta": "B",
+    "explicacion": "\\d es la clase de caracteres que coincide con cualquier dígito (0-9). \\w son caracteres de palabra, \\s espacios en blanco y \\b límites de palabra."
+  },
+  "q9": {
+    "tipo": "multiple",
+    "opciones": [
+      "\\d{4}-\\d{2}-\\d{2}",
+      "[0-9]{4}-[0-9]{2}-[0-9]{2}",
+      "\\d{4}/\\d{2}/\\d{2}",
+      "[A-Za-z]+ \\d{1,2}, \\d{4}"
+    ],
+    "correctas": ["A", "B"],
+    "explicacion": "Para el formato AAAA-MM-DD son válidos \\d{4}-\\d{2}-\\d{2} y su equivalente con [0-9]. La opción C usa barras (formato distinto) y la D es una fecha en texto."
+  },
+  "q10": {
+    "tipo": "unica",
+    "opciones": [
+      "matplotlib",
+      "pandas",
+      "argparse",
+      "shutil"
+    ],
+    "correcta": "B",
+    "explicacion": "pandas es la biblioteca por excelencia para limpiar y transformar datos tabulares: duplicados, valores faltantes, tipos, normalización, etc."
+  }
+}
