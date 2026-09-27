@@ -1,0 +1,112 @@
+{
+  "q1": {
+    "tipo": "unica",
+    "opciones": [
+      "\"r\" (lectura)",
+      "\"w\" (escritura)",
+      "\"a\" (append)",
+      "\"x\" (creación exclusiva)"
+    ],
+    "correcta": "C",
+    "explicacion": "El modo \"a\" (append) añade el contenido al final del archivo sin borrar lo existente, y crea el archivo si no existe."
+  },
+  "q2": {
+    "tipo": "unica",
+    "opciones": [
+      "os.rename()",
+      "shutil.move()",
+      "glob.glob()",
+      "os.path.exists()"
+    ],
+    "correcta": "B",
+    "explicacion": "shutil.move() mueve un archivo o directorio a una nueva ubicación. os.rename() también puede mover, pero shutil.move() es el atajo más claro y maneja mejor los casos comunes."
+  },
+  "q3": {
+    "tipo": "unica",
+    "opciones": [
+      "Busca archivos .txt en el directorio actual",
+      "Busca archivos .pdf en el directorio actual y en todos sus subdirectorios",
+      "Crea una carpeta llamada pdf",
+      "Renombra todos los archivos a .pdf"
+    ],
+    "correcta": "B",
+    "explicacion": "El patrón '**/*.pdf' con recursive=True recorre el directorio actual y todos los subdirectorios buscando archivos que terminen en .pdf."
+  },
+  "q4": {
+    "tipo": "multiple",
+    "opciones": [
+      "glob para localizar los archivos .pdf en subdirectorios",
+      "shutil para mover los archivos a un nuevo directorio",
+      "math para calcular tamaños",
+      "os.path para manipular las rutas de los archivos"
+    ],
+    "correctas": ["A", "B", "D"],
+    "explicacion": "glob encuentra los PDF; shutil los mueve; os.path ayuda a construir/inspeccionar rutas. math no se usa para manipulación de archivos."
+  },
+  "q5": {
+    "tipo": "unica",
+    "opciones": [
+      "Abre el archivo en modo escritura por defecto",
+      "Cierra el archivo automáticamente al salir del bloque",
+      "Evita que el archivo se cree",
+      "Comprime el archivo"
+    ],
+    "correcta": "B",
+    "explicacion": "La sentencia with actúa como gestor de contexto: garantiza que el archivo se cierre automáticamente, incluso si ocurre un error, evitando fugas de recursos."
+  },
+  "q6": {
+    "tipo": "unica",
+    "opciones": [
+      "\"r\"",
+      "\"w\"",
+      "\"a\"",
+      "\"x\""
+    ],
+    "correcta": "D",
+    "explicacion": "El modo \"x\" (creación exclusiva) crea un nuevo archivo pero lanza un error si este ya existe, evitando sobrescribir datos por accidente."
+  },
+  "q7": {
+    "tipo": "unica",
+    "opciones": [
+      "os.getcwd()",
+      "os.listdir()",
+      "os.mkdir()",
+      "os.rename()"
+    ],
+    "correcta": "A",
+    "explicacion": "os.getcwd() devuelve la ruta del directorio de trabajo actual. os.listdir() lista su contenido, os.mkdir() crea carpetas y os.rename() renombra."
+  },
+  "q8": {
+    "tipo": "unica",
+    "opciones": [
+      "glob.glob('*.txt')",
+      "glob.glob('**/*.txt', recursive=True)",
+      "glob.glob('data/*.txt')",
+      "glob.glob('*.[txt,pdf]')"
+    ],
+    "correcta": "A",
+    "explicacion": "El patrón '*.txt' encuentra todos los archivos .txt del directorio actual. Los otros buscan en subdirectorios, en una carpeta 'data' o en varios tipos."
+  },
+  "q9": {
+    "tipo": "unica",
+    "opciones": [
+      "El archivo contiene datos con formato inválido",
+      "El script no tiene los permisos necesarios para acceder al archivo",
+      "El archivo tiene codificación incorrecta",
+      "La unidad de disco está llena"
+    ],
+    "correcta": "B",
+    "explicacion": "PermissionError indica falta de permisos de lectura/escritura. Puede comprobarse antes con os.access() para evitarlo."
+  },
+  "q10": {
+    "tipo": "unica",
+    "opciones": [
+      "os.path.join() une partes de una ruta de forma portable",
+      "os.path.basename() devuelve el directorio padre",
+      "os.path.exists() crea el archivo si no existe",
+      "os.listdir() muestra el tamaño de cada archivo"
+    ],
+    "correcta": "A",
+    "explicacion": "os.path.join() une segmentos de ruta con el separador correcto del sistema. basename() devuelve el nombre del archivo, exists() comprueba (no crea) y listdir() solo lista nombres."
+  }
+}
