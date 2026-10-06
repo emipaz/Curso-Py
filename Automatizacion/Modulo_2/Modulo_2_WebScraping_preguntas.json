@@ -1,0 +1,112 @@
+{
+  "q1": {
+    "tipo": "unica",
+    "opciones": [
+      "requests",
+      "beautifulsoup4",
+      "scrapy",
+      "lxml"
+    ],
+    "correcta": "B",
+    "explicacion": "BeautifulSoup transforma el HTML en una estructura de árbol que facilita navegar y extraer elementos. requests descarga el contenido, pero es bs4 quien lo analiza."
+  },
+  "q2": {
+    "tipo": "unica",
+    "opciones": [
+      "find()",
+      "find_all()",
+      "select_one()",
+      "get_text()"
+    ],
+    "correcta": "B",
+    "explicacion": "find_all() devuelve una lista con TODOS los elementos que coinciden con los criterios. find() y select_one() devuelven solo el primero, y get_text() extrae texto."
+  },
+  "q3": {
+    "tipo": "unica",
+    "opciones": [
+      "find('p')",
+      "select_one('.review-text')",
+      "get_text()",
+      "find_all('div', class_='review')"
+    ],
+    "correcta": "C",
+    "explicacion": "get_text() se aplica sobre un elemento ya seleccionado y devuelve el texto limpio sin etiquetas HTML, ideal para extraer el contenido de una reseña."
+  },
+  "q4": {
+    "tipo": "unica",
+    "opciones": [
+      "soup.find('div', class_='precio').get_text()",
+      "soup.find_all('span', class_='precio')",
+      "soup.find('span', class_='precio').get_text()",
+      "soup.select_one('.precio').get_text()"
+    ],
+    "correcta": "C",
+    "explicacion": "El precio está en un <span> con clase 'precio', por lo que soup.find('span', class_='precio').get_text() lo localiza y extrae su texto. La D también funcionaría, pero la C es la que coincide con el enunciado."
+  },
+  "q5": {
+    "tipo": "multiple",
+    "opciones": [
+      "Arañas (spiders) que navegan y extraen datos",
+      "Items que definen la estructura de los datos",
+      "Tuberías (pipelines) que procesan y exportan los datos",
+      "Hojas de estilo CSS del sitio"
+    ],
+    "correctas": ["A", "B", "C"],
+    "explicacion": "Scrapy se organiza en arañas (navegar/extraer), items (definir campos) y pipelines (limpiar, validar y exportar). Las hojas de estilo no son un componente del framework."
+  },
+  "q6": {
+    "tipo": "unica",
+    "opciones": [
+      "Evitar el acceso no autorizado a un sitio",
+      "Definir el diseño de una página web",
+      "Navegar automáticamente y recoger datos de sitios web",
+      "Mostrar visualmente el contenido de una página"
+    ],
+    "correcta": "C",
+    "explicacion": "En Scrapy, una araña (spider) es el componente que recorre un sitio siguiendo reglas y extrae los datos definidos en sus items."
+  },
+  "q7": {
+    "tipo": "multiple",
+    "opciones": [
+      "Respetar el archivo robots.txt del sitio",
+      "Revisar los Términos de servicio del sitio",
+      "Recolectar datos lo más rápido posible para minimizar carga",
+      "Evitar peticiones excesivas que sobrecarguen el servidor"
+    ],
+    "correctas": ["A", "B", "D"],
+    "explicacion": "El scraping ético respeta robots.txt y los TOS, y dosifica las peticiones para no sobrecargar el servidor. Recolectar 'lo más rápido posible' es lo contrario de un enfoque ético."
+  },
+  "q8": {
+    "tipo": "unica",
+    "opciones": [
+      "tag.string",
+      "tag.attrs['href']",
+      "tag.parent",
+      "tag.contents"
+    ],
+    "correcta": "B",
+    "explicacion": "La propiedad attrs es un diccionario con los atributos del elemento. Para una etiqueta <a>, tag.attrs['href'] (o tag['href']) devuelve la URL del enlace."
+  },
+  "q9": {
+    "tipo": "unica",
+    "opciones": [
+      "Definir todas las URL en start_urls",
+      "Usar getall() para seguir todos los enlaces",
+      "Identificar patrones de URL paginadas y generar requests para cada página",
+      "Usar response.css() para extraer el texto de cada página"
+    ],
+    "correcta": "C",
+    "explicacion": "La paginación se maneja detectando el patrón de las URL de las páginas (p.ej. ?page=2, ?page=3) y generando nuevas solicitudes para cada una."
+  },
+  "q10": {
+    "tipo": "unica",
+    "opciones": [
+      "BeautifulSoup por sí solo no ve contenido cargado con JavaScript",
+      "BeautifulSoup es lento para análisis",
+      "requests no permite descargar HTML",
+      "BeautifulSoup requiere conexión a internet siempre"
+    ],
+    "correcta": "A",
+    "explicacion": "BeautifulSoup analiza HTML estático. Los sitios que cargan contenido con JavaScript/AJAX tras la carga inicial requieren herramientas que ejecuten JS (p.ej. Selenium, Playwright)."
+  }
+}
