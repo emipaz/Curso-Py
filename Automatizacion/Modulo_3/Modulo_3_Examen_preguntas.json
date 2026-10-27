@@ -1,0 +1,122 @@
+{
+  "q1": {
+    "enunciado": "Estás diseñando una API para un sistema de gestión de libros de una biblioteca y necesitas actualizar los detalles de un libro existente, como su título o autor. ¿Qué método HTTP sería el más apropiado?",
+    "tipo": "unica",
+    "opciones": [
+      "POST",
+      "PUT",
+      "GET",
+      "DELETE"
+    ],
+    "correcta": "B",
+    "explicacion": "Actualizar un recurso que ya existe es una operación idempotente sobre el recurso completo, y ese verbo es PUT. POST crearía un libro nuevo en lugar de modificar el indicado, GET solo lee y DELETE lo elimina."
+  },
+  "q2": {
+    "enunciado": "Mientras trabajas con una API, recibes una respuesta con el código de estado 401. ¿Cuál es la razón más probable de este código de estado?",
+    "tipo": "unica",
+    "opciones": [
+      "El servidor está experimentando una sobrecarga temporal.",
+      "El recurso solicitado no se ha podido encontrar en el servidor.",
+      "La solicitud estaba malformada o le faltaban parámetros requeridos.",
+      "La solicitud requiere credenciales de autenticación para acceder al recurso."
+    ],
+    "correcta": "D",
+    "explicacion": "El 401 Unauthorized significa exactamente eso: falta autenticación o la que enviaste no vale. La sobrecarga sería 503, un recurso inexistente 404 y una petición mal formada 400."
+  },
+  "q3": {
+    "enunciado": "Tu aplicación encuentra un error 503 Service Unavailable mientras interactúa con una API. ¿Cuál es la causa más probable de este error?",
+    "tipo": "unica",
+    "opciones": [
+      "Su aplicación no ha podido autenticarse con el servidor API.",
+      "Ha superado el límite de velocidad de la API.",
+      "Faltan parámetros obligatorios en su solicitud de API.",
+      "El servidor de la API no puede atender solicitudes temporalmente."
+    ],
+    "correcta": "D",
+    "explicacion": "503 Service Unavailable significa que el servidor existe pero ahora mismo no puede atender la petición, normalmente por mantenimiento o sobrecarga. Es un problema del servidor, así que la respuesta correcta es esperar y reintentar con backoff."
+  },
+  "q4": {
+    "enunciado": "Como director de marketing, desea aumentar la eficacia y la personalización de sus campañas automatizando el envío de mensajes dirigidos a los clientes en función de su comportamiento y sus preferencias. ¿Qué enfoque lograría mejor este objetivo?",
+    "tipo": "unica",
+    "opciones": [
+      "Confíe únicamente en los algoritmos de las redes sociales para dirigir automáticamente los anuncios a su base de clientes deseada.",
+      "Utilice Python para analizar los datos de los clientes y automatizar el envío de mensajes dirigidos a través de diversos canales.",
+      "Contrate a un equipo de asistentes de marketing para realizar un seguimiento del comportamiento de los clientes y enviar mensajes personalizados manualmente.",
+      "Segmente manualmente su base de clientes y envíe correos electrónicos individuales a cada grupo."
+    ],
+    "correcta": "B",
+    "explicacion": "El objetivo es automatización con personalización, y eso es exactamente integrar servicios de terceros: Python analiza los datos y dispara el envío por cada canal. Delegar en las redes sociales o hacerlo a mano no escala."
+  },
+  "q5": {
+    "enunciado": "Una empresa de comercio electrónico está desarrollando una nueva plataforma en línea y quiere garantizar una experiencia de pago fluida y segura. ¿Cuáles son las ventajas de integrar su plataforma con una pasarela de pago de terceros?",
+    "tipo": "multiple",
+    "opciones": [
+      "Elimina el riesgo de transacciones fraudulentas y filtraciones de datos",
+      "Proporciona acceso a los datos de pago de los clientes para campañas específicas de publicidad y marketing",
+      "Permite a la empresa centrarse en las funciones principales de la plataforma, como la exposición de productos y la experiencia del usuario",
+      "Reduce la necesidad de crear un sistema de procesamiento de pagos desde cero, ahorrando tiempo y recursos de desarrollo"
+    ],
+    "correctas": ["C", "D"],
+    "explicacion": "Integrar una pasarela resuelve el cumplimiento PCI y deja al equipo centrado en el producto, sin construir un sistema de pagos. No elimina el fraude (lo reduce) y el proveedor nunca cede los datos de pago del cliente: usarlos para publicidad va contra la normativa."
+  },
+  "q6": {
+    "enunciado": "Un músico quiere promocionar su próxima gira de conciertos en redes sociales y automatizar el proceso de compartir las fechas y los enlaces a las entradas en diferentes plataformas. ¿Qué bibliotecas de Python serían más útiles?",
+    "tipo": "multiple",
+    "opciones": [
+      "Instabot para automatizar las interacciones en Instagram",
+      "Tweepy para compartir actualizaciones en Twitter",
+      "Beautiful Soup para el raspado web de datos de Redes sociales",
+      "Solicitudes (requests) para realizar peticiones HTTP a cualquier API de Redes sociales"
+    ],
+    "correctas": ["A", "B"],
+    "explicacion": "Tweepy e Instabot son los SDK oficiales: gestionan autenticación y publicación. Beautiful Soup sirve para leer HTML, no para publicar, y requests sí habla HTTP pero no conoce el modelo de cada red, así que no es la librería adecuada para automatizar cuentas."
+  },
+  "q7": {
+    "enunciado": "Estás trabajando en un proyecto que requiere copias de seguridad diarias de tus datos en un servicio en la nube, y quieres automatizarlo para evitar olvidos y garantizar la coherencia. ¿Cuáles de los siguientes beneficios de las tareas programadas se aplican a este escenario?",
+    "tipo": "multiple",
+    "opciones": [
+      "Eficiencia",
+      "Seguridad mejorada",
+      "Coherencia",
+      "Automatización"
+    ],
+    "correctas": ["A", "B", "C", "D"],
+    "explicacion": "Las copias de seguridad diarias en la nube son el ejemplo canónico: se hacen solas sin recordatorios, se hacen igual todos los días, y tener una copia fuera del equipo protege frente a fallos, ransomware y errores humanos."
+  },
+  "q8": {
+    "enunciado": "Tienes una tarea cron que ejecuta un script para generar informes cada hora, pero observas que los informes no se generan. ¿Cuál de las siguientes razones podría ser la causa del fallo de la tarea cron?",
+    "tipo": "unica",
+    "opciones": [
+      "La ruta del script especificada en la entrada crontab es incorrecta.",
+      "El demonio cron no se está ejecutando en su sistema.",
+      "El archivo crontab tiene propiedad o permisos incorrectos.",
+      "El reloj del sistema no está sincronizado con un servidor horario de red."
+    ],
+    "correcta": "A",
+    "explicacion": "Es la causa más frecuente y la más barata de descartar. En cron el fallo típico de una tarea que no corre es una ruta relativa o mal escrita: el servicio no usa tu directorio de trabajo, así que siempre hay que poner la ruta completa."
+  },
+  "q9": {
+    "enunciado": "Estás automatizando una tarea de análisis de datos que debe ejecutarse cada 10 minutos. Sin embargo, consume muchos recursos y no quieres que interfiera con otros procesos del sistema. ¿Qué enfoque es el más adecuado?",
+    "tipo": "unica",
+    "opciones": [
+      "Explore marcos de programación alternativos, como Celery o APScheduler, que ofrecen funciones más avanzadas para la gestión de recursos y la priorización de tareas.",
+      "Optimice el script de análisis de datos para reducir su consumo de recursos antes de programarlo con el módulo schedule.",
+      "Ejecute manualmente la tarea cada 10 minutos durante las horas de menor actividad para minimizar el impacto en otros procesos.",
+      "Utilice el módulo schedule para ejecutar la tarea cada 10 minutos, confiando en las capacidades de gestión de recursos integradas en el módulo."
+    ],
+    "correcta": "A",
+    "explicacion": "schedule es deliberadamente minimalista: solo dispara la función, no prioriza, no limita recursos ni distribuye carga. Cuando una tarea cada 10 minutos pesa y compite con otros procesos, el salto de nivel correcto es Celery (colas y workers) o APScheduler (persistencia y control de concurrencia)."
+  },
+  "q10": {
+    "enunciado": "Un equipo de desarrolladores de Python necesita programar tareas simples y recurrentes dentro de sus scripts, con un método fácil de aprender, compatible con varias plataformas y que permita mantener la lógica dentro del propio código Python. ¿Qué método se adaptaría mejor?",
+    "tipo": "unica",
+    "opciones": [
+      "Cron",
+      "Funciones Azure",
+      "El módulo schedule",
+      "Programador de tareas"
+    ],
+    "correcta": "C",
+    "explicacion": "Piden tareas simples y recurrentes, multiplataforma y la lógica dentro del propio script Python. schedule cumple las tres: se aprende en una línea, funciona en Windows, macOS y Linux, y se define en el código. Cron y el Programador de tareas son externos y atados a un sistema."
+  }
+}
